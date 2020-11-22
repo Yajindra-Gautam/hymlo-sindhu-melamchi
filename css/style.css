@@ -1,0 +1,486 @@
+/*Top Navigation Bar */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*----------Min Nav------------ */
+.logo-container{
+  margin-top: 0;
+  display: inline-block;
+  width: 40%;
+  background-color: rgb(236, 233, 233);
+  border-radius: 4px;
+}
+.navbar-brand  img{
+  position: absolute;
+  top: 0.2vh;
+  left: 10vh;
+  height: 20vh;
+}
+.navbar h5 {
+  display: inline-block;
+  position: absolute;
+  top: 5vh;
+  left: 30vh;
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+.navbar h6{
+  display: inline-block;
+  position: absolute;
+  top: 10vh;
+  left: 30vh;
+  color: whitesmoke;
+  font-size: 1rem;
+}
+.logo-container{
+  display: flex;
+  justify-content: center;
+  background-color: #008aff;
+}
+@media only screen and (max-width: 950px){
+  .navbar-brand  img{
+    top: 0.5vh;
+    left: 15vh;
+    height: 15vh;
+  }
+  .navbar h5 {
+    top: 5vh;
+    left: 30vh;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 500px){
+  .navbar-brand  img{
+    top: 0.5vh;
+    left: 5vh;
+    height: 15vh;
+  }
+  .navbar h5 {
+    top: 10vh;
+    left: 20vh;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+  .navbar h6 {
+    top: 15vh;
+    left: 20vh;
+    color: whitesmoke;
+    font-size: 1.5rem;
+  }
+
+}
+@media only screen and (max-width: 390px){
+  .navbar-brand  img{
+    top: 0.5vh;
+    left: 2vh;
+    height: 15vh;
+  }
+  .navbar h5 {
+    display: none;
+  }
+  .navbar h6 {
+    display: none;
+  }
+
+}
+.animated{
+  z-index: 20;
+}
+.d-block{
+  z-index: 20;
+}
+.carousel-control-prev{
+  z-index: 20;
+}
+.carousel-control-next{
+  z-index: 20;
+}
+.carousel-item {
+  z-index: 10;
+  height: 100vh;
+  min-height: 300px;
+}
+.carousel-item  img{
+  z-index: 20;
+}
+.carousel-caption {
+  
+  bottom: 220px;
+}
+.carousel-caption h5 {
+ 
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.carousel-caption p {
+  
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.carousel-caption a {
+  
+  text-transform: uppercase;
+  background: #262626;
+  padding: 10px 30px;
+  display: inline-block;
+  color: #fff;
+  margin-top: 15px;
+}
+.navbar{
+  position: absolute;
+  
+}
+
+.navbar-nav a {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar-nav {
+  position: absolute;
+  top: 1rem;
+  left: 35rem;
+  text-align: center;
+}
+.nav-link {
+  padding: 0.2rem 1rem;
+}
+.nav-link.active,
+.nav-link:focus {
+  color: #fff;
+}
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+  background: #fff;
+}
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.w-100 {
+  height: 100vh;
+}
+@media only screen and (max-width: 767px) {
+  .navbar-nav.ml-auto {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-nav a {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}  
+
+/*Wave Animation */
+@keyframes move_wave {
+  0% {
+      transform: translateX(0) translateZ(0) scaleY(1)
+  }
+  50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.55)
+  }
+  100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1)
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.8;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.6;
+}
+.bgBottom {
+  z-index: 5;
+  
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+animation: move-wave 3s;
+ -webkit-animation: move-wave 3s;
+ -webkit-animation-delay: 1s;
+ animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+/* Floating Share Button */
+
+.fabs {
+  bottom: 0;
+  position: fixed;
+  margin: 1em;
+  right: 0;
+}
+.fabs a{
+  text-decoration: none;
+  
+}
+
+
+.fab {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  margin: 20px auto 0;
+  box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 0px 4px 12px -7px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+  position: relative;
+}
+
+.fab > i {
+  font-size: 28px;
+  line-height: 60px;
+  transition: all .2s ease-in-out;
+  transition-delay: 2s;
+}
+
+.fab.red {
+  background: #F44336;
+}
+
+.fab.pink {
+  background: #E91E63;
+}
+
+.fab.purple {
+  background: #9C27B0;
+}
+
+.fab.deep-purple {
+  background: #673AB7;
+}
+
+.fab.indigo {
+  background: #3F51B5;
+}
+
+.fab.blue {
+  background: #2196F3;
+}
+
+.fab.light-blue {
+  background: #03A9F4;
+}
+
+.fab.cyan {
+  background: #00BCD4;
+}
+
+.fab.teal {
+  background: #009688;
+}
+
+.fab.green {
+  background: #4CAF50;
+}
+
+.fab.light-green {
+  background: #8BC34A;
+}
+
+.fab.lime {
+  background: #CDDC39;
+}
+
+.fab.yellow {
+  background: #FFEB3B;
+}
+
+.fab.amber {
+  background: #FFC107;
+}
+
+.fab.orange {
+  background: #FF9800;
+}
+
+.fab.deep-orange {
+  background: #FF5722;
+}
+
+.fab.brown {
+  background: #795548;
+}
+
+.fab.grey {
+  background: #9E9E9E;
+}
+
+.fab.blue-grey {
+  background: #607D8B;
+}
+
+.fab:active,
+.fab:focus,
+.fab:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+.fab:not(:last-child) {
+  width: 36px;
+  height: 36px;
+  margin: 20px auto 0;
+  opacity: 0;
+}
+
+.fab:not(:last-child) > i {
+  font-size: 18px;
+  line-height: 40px;
+  transition: all .3s ease-in-out;
+}
+
+.fabs:hover .fab:not(:last-child) {
+  opacity: 1;
+  width: 40px;
+  height: 40px;
+  margin: 15px auto 0;
+}
+
+.fab:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+  transition-delay: 25ms;
+}
+
+.fab:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 20ms;
+  transition-delay: 20ms;
+}
+
+.fab:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+
+.fab:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 60ms;
+  transition-delay: 60ms;
+}
+
+.fab:not(:last-child):nth-last-child(5) {
+  -webkit-transition-delay: 80ms;
+  transition-delay: 80ms;
+}
+
+[tooltip]:before {
+  font-family: 'Roboto';
+  font-weight: 600;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #585858;
+  color: #fff;
+  content: attr(tooltip);
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
+  padding: 5px 7px;
+  margin-right: 10px;
+  position: absolute;
+  right: 100%;
+  bottom: 5%;
+  white-space: nowrap;
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+/*Floating Share Button Ends */
+
+/* Representative and Officers */
+.officersbg{
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  background:linear-gradient(180deg, #008aff, #ff137d) ;
+  background-size: cover;
+  background-blend-mode: screen;
+}
+
+/* Footer Section */
+.page-footer {
+  background-color: #343a40;
+  color: #fff;
+}
+.page-footer a {
+  text-decoration: none;
+  color: #fff;
+}
