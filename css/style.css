@@ -436,7 +436,7 @@ header,
 /* Footer Section */
 
 .new_footer_area {
-  background-image: url("/image/Frozen.jpg");
+  background: url("image/Frozen.jpg");
 }
 
 
